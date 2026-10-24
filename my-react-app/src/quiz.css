@@ -1,0 +1,324 @@
+.quiz-page {
+    min-height: 100vh;
+    width: 100%;
+    background: #241e3b;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px ;
+    box-sizing: border-box;
+    z-index: 102;
+}
+
+.quiz-card {
+    
+    width: 650px;
+    padding: 30px 45px 45px;
+    border-radius: 24px;
+
+    background: #29243A;
+    color: #FFFFFF;
+
+    border: 1px solid #413957;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    position: relative;
+    animation:slideUp 1s ease-out forwards;
+}
+
+#nav1{
+    position: absolute;
+    top:100%;
+    height:60px;
+    padding-right:20px;
+    padding-left:20px ;
+    margin-left: -50px;
+    gap:20px;
+    display:flex;   
+}
+
+.quiz-card h1 {
+    color: #D8B4FE;
+    margin-bottom: 20px;
+}
+
+.quiz-card p ,ul{
+    color: #E5E0EE;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.quiz-card button {
+    display: block;
+    width: 100%;
+    margin: 14px 0;
+    padding: 15px 18px;
+
+    border: 1px solid #514765;
+    border-radius: 12px;
+
+    background: #342E47;
+    color: #F5F3FA;
+
+    font-size: 16px;
+    text-align: left;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+.quiz-card button:hover {
+    background: #6D4AA8;
+    border-color: #9B6DDA;
+    transform: translateY(-2px);
+}
+
+.button{
+    width:125px !important;
+    height: 50px;
+}
+
+.button:hover {
+    background: #6D4AA8;
+    border-color: #9B6DDA;
+    transform: translateY(-2px);
+}
+
+#next{
+    padding-left: 35px;
+}
+#start{
+    padding-left: 35px;
+    margin-left: 25px;
+}
+
+#restart{
+    padding-left: 35px;
+    margin-left: 150px;
+}
+
+#submit{
+    padding-left: 35px;
+    margin-left:0px;
+ }
+
+#clear{
+    position: absolute;
+    top:5%;
+    left:77%;
+    padding-left: 37px;
+    margin-left:0px; 
+    width:115px !important; 
+}
+
+#instruction-card{
+    height:460px;
+}
+
+#ins{
+    margin-left: 25px;
+}
+#h1{
+    font-size:6em;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 40px;
+
+}
+
+#options button.selected{
+    background:  #502b91;
+    border-color: #8042d7;
+}
+
+#main{
+    border:2px solid white;
+}
+#progress-bar{
+    margin-bottom: 30px;
+    width:700px;
+    height:15px;
+    border-radius: 50px;
+    -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  transform-origin:left;
+
+  animation:width1 0.7s ease-out forwards;
+
+  background-color:linear-gradient(
+    90deg,
+    #a855f7,
+    #6366f1,
+    #22d3ee
+);
+
+box-shadow:
+    0 0 8px #6366f1,
+    0 0 12px rgba(34, 211, 238, 0.5);
+  overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 50px;
+ 
+}
+
+progress::-webkit-progress-value {
+  background-color: #9d2ea7;
+   background: linear-gradient(
+        90deg,
+        #8b5cf6,
+        #6366f1,
+        #06b6d4
+    );
+
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
+    transition: width 0.4s ease;
+}
+
+progress::-moz-progress-bar {
+  background-color: white;
+  border-radius: 50px; 
+}
+
+#container{
+    position: absolute;
+    top:26%;
+    left:80%;
+    width: 250px;
+    max-height:400px;
+    min-width: 0;
+    border: 2px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+    scroll-padding-top: 15px;
+    scroll-padding-bottom: 15px;
+    padding:20px 5px 20px 15px;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.35),
+        inset 0 0 20px rgba(255, 255, 255, 0.03);
+
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+
+    animation:slideLeft 0.75s ease-out forwards;
+}
+
+#container::-webkit-scrollbar {
+  display: none;
+}
+
+#container button{
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    background-color: rgba(255, 255, 255, 0.07);
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    
+}
+
+#container button:hover {
+    background: #6D28D9;
+    border-color: #A78BFA;
+    color: white;
+
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+
+
+    transform: translateY(-2px);
+}
+
+
+#container button.active {
+    background: linear-gradient(
+        135deg,
+        #7b2cbf,
+        #5a189a
+    );
+
+    border-color: rgba(255, 255, 255, 0.7);
+
+    color: white;
+
+    box-shadow:
+        0 0 18px rgba(123, 44, 191, 0.45);
+}
+
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes width1 {
+  0% {
+    transform:scaleX(0);
+  
+  }
+  100% {
+    transform:scaleX(1);
+   
+  }
+}
+@keyframes slideLeft{
+  0% {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@media (max-width:1300px){
+    #container{
+        display: none;
+    }
+}
+
+
+
+
+
+

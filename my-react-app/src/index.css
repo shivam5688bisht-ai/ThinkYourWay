@@ -1,0 +1,116 @@
+body,
+#root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.quiz-home {
+    min-height: 100vh;
+    width: 100%;
+
+    background:
+        
+        radial-gradient(
+            circle at 92% 100%,
+            rgba(221, 64, 190, 0.75) 0%,
+            rgba(110, 55, 190, 0.45) 25%,
+            transparent 48%
+        ),
+
+        
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(40, 80, 220, 0.65) 0%,
+            rgba(30, 45, 150, 0.35) 30%,
+            transparent 50%
+        ),
+
+        radial-gradient(
+            circle at 95% 5%,
+            rgba(100, 45, 200, 0.65) 0%,
+            rgba(50, 40, 140, 0.3) 30%,
+            transparent 50%
+        ),
+
+        /* Main dark background */
+        linear-gradient(
+            135deg,
+            #050b2b 0%,
+            #07134a 45%,
+            #101052 75%,
+            #08072d 100%
+        );
+
+    position: relative;
+    overflow: hidden;
+}
+
+.quiz-home::before {
+    content: "";
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -250px;
+    right: -150px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(55, 80, 220, 0.8) 0%,
+            rgba(80, 40, 190, 0.55) 45%,
+            rgba(180, 60, 210, 0.35) 65%,
+            transparent 72%
+        );
+
+    filter: blur(5px);
+}
+
+
+.quiz-home::after {
+    content: "";
+    position: absolute;
+
+    width: 550px;
+    height: 550px;
+
+    bottom: -350px;
+    left: -250px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(30, 80, 230, 0.8) 0%,
+            rgba(40, 50, 180, 0.5) 50%,
+            transparent 70%
+        );
+
+    filter: blur(4px);
+}
+
+.pink-glow {
+    position: absolute;
+
+    width: 500px;
+    height: 300px;
+
+    right: -100px;
+    bottom: -100px;
+
+    background: radial-gradient(
+        ellipse,
+        rgba(236, 70, 190, 0.8) 0%,
+        rgba(150, 50, 200, 0.45) 40%,
+        transparent 75%
+    );
+
+    filter: blur(40px);
+    pointer-events: none;
+}
