@@ -994,6 +994,8 @@ function Quiz({onHome,difficulty}) {
         seti(value-1);
     }  
 
+    console.log(difficulty);
+
     if(showResults){
        return <Result  answers={answers} selectedOptions={selectedOptions} questions={questions}  setSelectedOptions={ setSelectedOptions} onHome={onHome}/>
     } 
@@ -1005,7 +1007,7 @@ function Quiz({onHome,difficulty}) {
                  
                 <div className="quiz-page"> 
 
-                        <div id="show_diff">Difficulty:{difficulty}</div>
+                        <div id="show_diff" className={difficulty}>Difficulty: {difficulty}</div>
             
                     <progress id="progress-bar" value={progress()} max="100"> </progress>
                     
