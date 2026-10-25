@@ -1,20 +1,24 @@
 import { useState } from 'react';
 import './App.css' 
 import Instructions from './instructions.jsx';
-import Result from './Results.jsx';
 import Quiz from './quiz.jsx';
-
 
 
 function App() {
   const [page, setPage] = useState("home");
 
+  const [difficulty, setDifficulty] = useState("Medium");
+
   if (page==="instruct") 
-    return <Instructions onQuiz={()=>setPage("quiz")}/>
+    return <Instructions
+    difficulty={difficulty}
+    setDifficulty={setDifficulty}
+    onQuiz={() => setPage("quiz")}
+/>
 
   if(page==="quiz"){
     return(
-      <Quiz onResult={()=>setPage("result")} onHome={()=>setPage("home")}/>
+      <Quiz difficulty={difficulty} onHome={()=>setPage("home")}  Display_instructions={Display_instructtions}/>
     )
   } 
 
@@ -44,7 +48,6 @@ function App() {
             <p id="description">Test your knowledge, challenge your thinking and learn something new.</p>
             <button onClick={()=>setPage("instruct")}  className="start-quiz">Start Quiz</button>
           </div>
-          
       </main>
 
       </div>

@@ -114,7 +114,7 @@
 }
 
 #instruction-card{
-    height:460px;
+    height:550px;
 }
 
 #ins{
@@ -123,8 +123,8 @@
 #h1{
     font-size:6em;
     text-align: center;
-    margin-top: 0px;
-    margin-bottom: 40px;
+    margin-top: -14px;
+    margin-bottom: 25px;
 
 }
 
@@ -133,9 +133,49 @@
     border-color: #8042d7;
 }
 
-#main{
-    border:2px solid white;
+.difficult{
+    position: absolute;
+    top:85%;
+    left:9%;
+    display:flex;
+    gap:20px;
 }
+
+.difficult button{
+    width:100px;
+    text-align: center;
+    opacity:85%;
+    transform: scale(0.85);
+    transition:all 0.3s ease ;
+}
+
+.difficult button.difficult1{
+    transform:scale(1);
+    opacity:1;
+    background:  #8042d7;
+    border-color: #9B6DDA;
+    box-shadow:0 0 8px #9B6DDA;
+    
+}
+
+.difficult button:not(.difficult1):hover{
+    background: #8042d7;
+    border-color: #9B6DDA;
+    transform: scale(0.85) translateY(0px);
+    box-shadow:0 0 12px #9B6DDA;
+}
+
+#diff-text{
+    position:absolute;
+    top:-20%;
+    left:1%;
+    font-family: sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+
+
 #progress-bar{
     margin-bottom: 30px;
     width:700px;

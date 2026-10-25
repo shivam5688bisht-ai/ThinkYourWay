@@ -53,7 +53,7 @@ function Result({ answers, selectedOptions, questions, setSelectedOptions, onHom
             <div className="results-page">
                 <div className="result-card">
 
-                    <div id="result-text" className="typing">RESULT : {score}/{l}</div>
+                    <div id="result-text" className="typing" data-text="Result">RESULT : {score}/{l}</div>
                     <div id="correct" className="res">Correct : {score}</div>
                     <div id="incorrect" className="res">Incorrect : {l - score - skipped}</div>
                     <div id="skip" className="res">Skipped : {skipped}</div>
@@ -102,7 +102,9 @@ function Result({ answers, selectedOptions, questions, setSelectedOptions, onHom
                         </div>
                     </div>
                     </div>
+                    <div id="remark">Remarks:</div>
                     <div id="evaluation" className="res">
+                        
                         {evaluation(score)}
                     </div>
 
