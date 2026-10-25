@@ -1001,11 +1001,12 @@ function Quiz({onHome,difficulty}) {
             <>
             <div className="quiz-home">
             <div className="pink-glow"></div> 
+
                  
                 <div className="quiz-page"> 
 
-                    
-
+                        <div id="show_diff">Difficulty:{difficulty}</div>
+            
                     <progress id="progress-bar" value={progress()} max="100"> </progress>
                     
                     
