@@ -47,13 +47,17 @@ function Result({ answers, selectedOptions, questions, setSelectedOptions, onHom
         );
     }
 
+    function give(score){
+        return score>10 ? score : '0'+score;
+    }
+
     return (
 
         <>
             <div className="results-page">
                 <div className="result-card">
 
-                    <div id="result-text" className="typing" data-text="Result">RESULT : {score}/{l}</div>
+                    <div id="result-text" className="typing" data-text="Result">RESULT : {give(score)}/{l}</div>
                     <div id="correct" className="res">Correct : {score}</div>
                     <div id="incorrect" className="res">Incorrect : {l - score - skipped}</div>
                     <div id="skip" className="res">Skipped : {skipped}</div>

@@ -73,6 +73,9 @@
     font-size: 3.5em;
     letter-spacing: 4px;
     background-size: 225% 100%;
+    display:flex;
+    padding-left:2px;
+    margin-left:-10px;
 
     animation:
         typing 1s steps(13) forwards,
@@ -92,9 +95,7 @@
     overflow: hidden;
     white-space: nowrap;
     color: #C4B5FD;
-    letter-spacing: 3px;
-
-    
+    letter-spacing: 3px;   
 }
 
 .res{
@@ -220,7 +221,7 @@
         width: 0;
     }
     to {
-        width: 400px;
+        width: 430px;
     }
 }
 
