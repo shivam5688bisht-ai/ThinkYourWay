@@ -888,7 +888,7 @@ const questions1 = [
 
 
 
-function Quiz({onHome,difficulty,Display_instructions}) {
+function Quiz({onHome,difficulty}) {
     let time=60;
 
     function randomiser(n){
@@ -1001,13 +1001,6 @@ function Quiz({onHome,difficulty,Display_instructions}) {
             <>
             <div className="quiz-home">
             <div className="pink-glow"></div> 
-
-                <div className="quiz-card" id="instruction-card">
-
-        <h1 id="h1">Quiz Rules</h1>
-       
-           {Display_instructions(difficulty)}
-           </div>
                  
                 <div className="quiz-page"> 
 

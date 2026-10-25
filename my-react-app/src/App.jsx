@@ -18,7 +18,7 @@ function App() {
 
   if(page==="quiz"){
     return(
-      <Quiz difficulty={difficulty} onHome={()=>setPage("home")}  Display_instructions={Display_instructtions}/>
+      <Quiz difficulty={difficulty} onHome={()=>setPage("home")} />
     )
   } 
 
