@@ -63,10 +63,14 @@
 }
 
 #main-text{
-    margin-top: 5px;
-    margin-left: 14px;
-    height: 88vh;
-    width:98vw;
+    margin-top: 0px;
+    margin-left: 0px;
+    top:100%;
+    left:50%;
+    
+    translate:-50% ;
+    height: 740px;
+    width:800px;
     position: relative;
     z-index:10;
     animation:slideUp 1s ease-out forwards;
@@ -106,7 +110,7 @@
 #description{
     position: absolute;
     
-    top:54%;
+    top:53.5%;
     left:50%;
     transform: translate(-50%,-50%);
     color:white;
@@ -133,7 +137,7 @@
     border-radius: 500px;
 
     position:absolute;
-    top:66%;
+    top:65.5%;
     left:50%;
     transform:translate(-50%,-50%);
 }
